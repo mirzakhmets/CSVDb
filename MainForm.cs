@@ -8,6 +8,7 @@ using System.Drawing;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
+using Microsoft.Win32;
 
 namespace CSVdb
 {
@@ -108,7 +109,7 @@ namespace CSVdb
     	this.tabControl.Controls.Add(this.tabPageMain);
     	this.tabControl.Controls.Add(this.tabPageHelp);
     	this.tabControl.Location = new System.Drawing.Point(3, 0);
-    	this.tabControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+    	this.tabControl.Margin = new System.Windows.Forms.Padding(4);
     	this.tabControl.Name = "tabControl";
     	this.tabControl.SelectedIndex = 0;
     	this.tabControl.Size = new System.Drawing.Size(456, 398);
@@ -127,9 +128,9 @@ namespace CSVdb
     	this.tabPageMain.Controls.Add(this.labelSource);
     	this.tabPageMain.Controls.Add(this.buttonRun);
     	this.tabPageMain.Location = new System.Drawing.Point(4, 25);
-    	this.tabPageMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+    	this.tabPageMain.Margin = new System.Windows.Forms.Padding(4);
     	this.tabPageMain.Name = "tabPageMain";
-    	this.tabPageMain.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+    	this.tabPageMain.Padding = new System.Windows.Forms.Padding(4);
     	this.tabPageMain.Size = new System.Drawing.Size(448, 369);
     	this.tabPageMain.TabIndex = 0;
     	this.tabPageMain.Text = "Main";
@@ -138,7 +139,7 @@ namespace CSVdb
     	// richTextBoxQuery
     	// 
     	this.richTextBoxQuery.Location = new System.Drawing.Point(23, 209);
-    	this.richTextBoxQuery.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+    	this.richTextBoxQuery.Margin = new System.Windows.Forms.Padding(4);
     	this.richTextBoxQuery.Name = "richTextBoxQuery";
     	this.richTextBoxQuery.Size = new System.Drawing.Size(407, 84);
     	this.richTextBoxQuery.TabIndex = 9;
@@ -156,7 +157,7 @@ namespace CSVdb
     	// buttonResult
     	// 
     	this.buttonResult.Location = new System.Drawing.Point(385, 146);
-    	this.buttonResult.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+    	this.buttonResult.Margin = new System.Windows.Forms.Padding(4);
     	this.buttonResult.Name = "buttonResult";
     	this.buttonResult.Size = new System.Drawing.Size(47, 25);
     	this.buttonResult.TabIndex = 7;
@@ -167,7 +168,7 @@ namespace CSVdb
     	// textBoxResult
     	// 
     	this.textBoxResult.Location = new System.Drawing.Point(23, 146);
-    	this.textBoxResult.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+    	this.textBoxResult.Margin = new System.Windows.Forms.Padding(4);
     	this.textBoxResult.Name = "textBoxResult";
     	this.textBoxResult.Size = new System.Drawing.Size(353, 22);
     	this.textBoxResult.TabIndex = 6;
@@ -184,7 +185,7 @@ namespace CSVdb
     	// buttonSourceRemove
     	// 
     	this.buttonSourceRemove.Location = new System.Drawing.Point(385, 78);
-    	this.buttonSourceRemove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+    	this.buttonSourceRemove.Margin = new System.Windows.Forms.Padding(4);
     	this.buttonSourceRemove.Name = "buttonSourceRemove";
     	this.buttonSourceRemove.Size = new System.Drawing.Size(47, 30);
     	this.buttonSourceRemove.TabIndex = 4;
@@ -195,7 +196,7 @@ namespace CSVdb
     	// buttonSourceAdd
     	// 
     	this.buttonSourceAdd.Location = new System.Drawing.Point(385, 38);
-    	this.buttonSourceAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+    	this.buttonSourceAdd.Margin = new System.Windows.Forms.Padding(4);
     	this.buttonSourceAdd.Name = "buttonSourceAdd";
     	this.buttonSourceAdd.Size = new System.Drawing.Size(47, 31);
     	this.buttonSourceAdd.TabIndex = 3;
@@ -211,7 +212,7 @@ namespace CSVdb
 			"Fruits.csv",
 			"Stores.csv"});
     	this.listBoxSource.Location = new System.Drawing.Point(23, 38);
-    	this.listBoxSource.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+    	this.listBoxSource.Margin = new System.Windows.Forms.Padding(4);
     	this.listBoxSource.Name = "listBoxSource";
     	this.listBoxSource.Size = new System.Drawing.Size(353, 68);
     	this.listBoxSource.TabIndex = 2;
@@ -228,7 +229,7 @@ namespace CSVdb
     	// buttonRun
     	// 
     	this.buttonRun.Location = new System.Drawing.Point(159, 316);
-    	this.buttonRun.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+    	this.buttonRun.Margin = new System.Windows.Forms.Padding(4);
     	this.buttonRun.Name = "buttonRun";
     	this.buttonRun.Size = new System.Drawing.Size(119, 32);
     	this.buttonRun.TabIndex = 0;
@@ -240,9 +241,9 @@ namespace CSVdb
     	// 
     	this.tabPageHelp.Controls.Add(this.richTextBoxHelp);
     	this.tabPageHelp.Location = new System.Drawing.Point(4, 25);
-    	this.tabPageHelp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+    	this.tabPageHelp.Margin = new System.Windows.Forms.Padding(4);
     	this.tabPageHelp.Name = "tabPageHelp";
-    	this.tabPageHelp.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+    	this.tabPageHelp.Padding = new System.Windows.Forms.Padding(4);
     	this.tabPageHelp.Size = new System.Drawing.Size(448, 369);
     	this.tabPageHelp.TabIndex = 1;
     	this.tabPageHelp.Text = "Help";
@@ -251,7 +252,7 @@ namespace CSVdb
     	// richTextBoxHelp
     	// 
     	this.richTextBoxHelp.Location = new System.Drawing.Point(8, 7);
-    	this.richTextBoxHelp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+    	this.richTextBoxHelp.Margin = new System.Windows.Forms.Padding(4);
     	this.richTextBoxHelp.Name = "richTextBoxHelp";
     	this.richTextBoxHelp.ReadOnly = true;
     	this.richTextBoxHelp.Size = new System.Drawing.Size(428, 350);
@@ -276,11 +277,12 @@ namespace CSVdb
     	this.ClientSize = new System.Drawing.Size(461, 394);
     	this.Controls.Add(this.tabControl);
     	this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-    	this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+    	this.Margin = new System.Windows.Forms.Padding(4);
     	this.MaximizeBox = false;
     	this.MinimizeBox = false;
     	this.Name = "MainForm";
     	this.Text = "CSVdb";
+    	this.Shown += new System.EventHandler(this.MainFormShown);
     	this.tabControl.ResumeLayout(false);
     	this.tabPageMain.ResumeLayout(false);
     	this.tabPageMain.PerformLayout();
@@ -288,5 +290,53 @@ namespace CSVdb
     	this.ResumeLayout(false);
 
     }
+    
+    public void CheckRuns() {
+		try {
+			RegistryKey key = Registry.CurrentUser.OpenSubKey("Software\\OVG-Developers", true);
+			
+			int runs = -1;
+			
+			if (key != null && key.GetValue("Runs") != null) {
+				runs = (int) key.GetValue("Runs");
+			} else {
+				key = Registry.CurrentUser.CreateSubKey("Software\\OVG-Developers");
+			}
+			
+			runs = runs + 1;
+			
+			key.SetValue("Runs", runs);
+			
+			if (runs > 10) {
+				System.Windows.Forms.MessageBox.Show("Number of runs expired.\n"
+							+ "Please register the application (visit https://ovg-developers.mystrikingly.com/ for purchase).");
+				
+				Environment.Exit(0);
+			}
+		} catch (Exception e) {
+			Console.WriteLine(e.Message);
+		}
+	}
+	
+	public bool IsRegistered() {
+		try {
+			RegistryKey key = Registry.CurrentUser.OpenSubKey("Software\\OVG-Developers");
+			
+			if (key != null && key.GetValue("Registered") != null) {
+				return true;
+			}
+		} catch (Exception e) {
+			Console.WriteLine(e.Message);
+		}
+		
+		return false;
+	}
+    
+		void MainFormShown(object sender, EventArgs e)
+		{
+			if (!IsRegistered()) {
+    			CheckRuns();
+    		}
+		}
   }
 }

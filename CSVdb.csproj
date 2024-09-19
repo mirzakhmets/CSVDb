@@ -11,7 +11,7 @@
     <ApplicationVersion>1.0.8101.38144</ApplicationVersion>
     <FileAlignment>512</FileAlignment>
     <RootNamespace>CSVdb</RootNamespace>
-    <ApplicationIcon>..\..\Personal\Logotypes\Icons\Converted\icon-6.ico</ApplicationIcon>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
     <NoWin32Manifest>False</NoWin32Manifest>
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
     <NoStdLib>False</NoStdLib>
