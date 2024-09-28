@@ -8,7 +8,10 @@ using System.Drawing;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
+
+#if TRIAL
 using Microsoft.Win32;
+#endif
 
 namespace CSVdb
 {
@@ -291,6 +294,7 @@ namespace CSVdb
 
     }
     
+    #if TRIAL
     public void CheckRuns() {
 		try {
 			RegistryKey key = Registry.CurrentUser.OpenSubKey("Software\\OVG-Developers", true);
@@ -331,12 +335,15 @@ namespace CSVdb
 		
 		return false;
 	}
+    #endif
     
 		void MainFormShown(object sender, EventArgs e)
 		{
+			#if TRIAL
 			if (!IsRegistered()) {
     			CheckRuns();
     		}
+			#endif
 		}
   }
 }
