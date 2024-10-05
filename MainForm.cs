@@ -43,6 +43,11 @@ namespace CSVdb
 
     private void ButtonRunClick(object sender, EventArgs e)
     {
+    	if (this.textBoxResult.Text.Length == 0) {
+    		MessageBox.Show("Please specify the output file");
+    		return;
+    	}
+    	
       Database database = new Database();
       foreach (string path in this.listBoxSource.Items)
       {
@@ -54,7 +59,7 @@ namespace CSVdb
       }
       Node node = new Parser(new ParsingStream((Stream) new MemoryStream(Encoding.Default.GetBytes(this.richTextBoxQuery.Text)))).parse();
       Table table = new CSVdb.Db.Cursor(database).run(node);
-      FileStream output = File.Open(this.textBoxResult.Text, FileMode.CreateNew);
+      FileStream output = File.Open(this.textBoxResult.Text, FileMode.OpenOrCreate);
       table.write((Stream) output);
       output.Close();
     }
