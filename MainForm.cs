@@ -1,4 +1,6 @@
 ﻿
+#define TRIAL
+
 using CSVdb.CSV;
 using CSVdb.Db;
 using CSVdb.Query;
@@ -311,7 +313,7 @@ namespace CSVdb
 			
 			key.SetValue("Runs", runs);
 			
-			if (runs > 10) {
+			if (runs > 30) {
 				System.Windows.Forms.MessageBox.Show("Number of runs expired.\n"
 							+ "Please register the application (visit https://ovg-developers.mystrikingly.com/ for purchase).");
 				
